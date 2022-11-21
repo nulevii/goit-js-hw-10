@@ -28,6 +28,7 @@ const getCountries = event => {
         return;
       }
       if (countries.length > 1) {
+        COUNTRY_INFO.innerHTML = '';
         const countryElements = countries
           .map(
             country =>
@@ -37,6 +38,7 @@ const getCountries = event => {
         COUNTRY_LIST.innerHTML = countryElements;
         return;
       }
+      COUNTRY_LIST.innerHTML = '';
       const [country] = countries;
       COUNTRY_INFO.innerHTML = `<div><img src='${
         country.flags.svg
